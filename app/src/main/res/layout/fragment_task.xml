@@ -1,0 +1,68 @@
+<com.jieyi.googletodomvp.tasks.ScrollChildSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refresh_layout_task"
+    tools:context="com.jieyi.googletodomvp.tasks.TaskFragment">
+
+   <RelativeLayout
+       android:clickable="true"
+       android:id="@+id/tasksContainer"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/task_LL"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_taskLable"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ListView
+            android:id="@+id/lv_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+       <LinearLayout
+           android:gravity="center"
+           android:id="@+id/tasksNo"
+           android:layout_centerInParent="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           >
+           <ImageView
+               android:layout_width="48dp"
+               android:layout_height="48dp"
+               android:src="@drawable/ic_assignment_turned_in_24dp"
+               android:id="@+id/notaskIcon"
+               />
+
+           <TextView
+               android:id="@+id/noTasksMain"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="没有事务"
+               android:layout_marginBottom="10dp" />
+
+           <TextView
+               android:id="@+id/noTasksAdd"
+               android:layout_width="wrap_content"
+               android:layout_height="48dp"
+               android:layout_gravity="center"
+               android:background="@drawable/touch_feedback"
+               android:gravity="center"
+               android:text="未添加事务" />
+
+       </LinearLayout>
+   </RelativeLayout>
+
+</com.jieyi.googletodomvp.tasks.ScrollChildSwipeRefreshLayout>
